@@ -95,7 +95,7 @@ import RegisterPage from '@/views/RegisterPage.vue';
 import ForgotPassword from '@/components/ForgotPassword.vue';
 import DeleteAccount from '@/components/DeleteAccount.vue';
 import { mapGetters } from 'vuex';
-import { esAdmin } from '@/utils/adminAuth'; // Importa la función
+import { esAdmin } from '@/utils/adminAuth'; 
 
 export default {
   name: 'App',
@@ -109,7 +109,7 @@ export default {
   computed: {
     ...mapGetters(['usuarioAutenticado', 'isLoggedIn']),
     isAdminUser() {
-      return esAdmin(); // Utiliza la función importada
+      return esAdmin(); 
     },
   },
   methods: {

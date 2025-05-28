@@ -34,7 +34,7 @@ export default {
   },
   data() {
     return {
-      form: { // Creamos una copia para no modificar el prop directamente
+      form: { 
         id: this.tipoDocumento.id,
         nombre: this.tipoDocumento.nombre,
         descripcion: this.tipoDocumento.descripcion,
@@ -42,7 +42,6 @@ export default {
     };
   },
   watch: {
-    // Escuchar cambios en el prop 'tipoDocumento' para actualizar el formulario si se edita otro item
     tipoDocumento: {
       handler(newVal) {
         if (newVal) {

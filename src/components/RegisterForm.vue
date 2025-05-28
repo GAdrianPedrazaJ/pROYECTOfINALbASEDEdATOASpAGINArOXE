@@ -284,9 +284,7 @@ export default {
   padding-top: 0 !important;
 }
 
-/* Estilos para los v-text-field personalizados */
 .custom-input.v-text-field--outlined.v-input--dense {
-  /* Quitar el border-radius por defecto de Vuetify para que el nuestro prevalezca */
   border-radius: 0; 
 }
 

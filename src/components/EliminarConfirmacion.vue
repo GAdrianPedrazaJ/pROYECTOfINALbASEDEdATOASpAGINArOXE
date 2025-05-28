@@ -22,11 +22,11 @@ export default {
       type: String,
       required: true
     },
-    tipo: { // Este prop es crucial para que AdminView sepa qué eliminar
+    tipo: { 
       type: String,
       required: true
     },
-    id: { // Este prop contendrá el ID o el correo, según el tipo
+    id: { 
       type: [String, Number],
       required: true
     }

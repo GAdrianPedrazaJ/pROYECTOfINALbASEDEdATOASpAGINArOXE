@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import cart from './modules/cart'; // Importa el módulo del carrito
+import cart from './modules/cart'; 
 
 Vue.use(Vuex);
 
@@ -37,6 +37,6 @@ export default new Vuex.Store({
     },
   },
   modules: {
-    cart, // Registra el módulo del carrito
+    cart, 
   },
 });

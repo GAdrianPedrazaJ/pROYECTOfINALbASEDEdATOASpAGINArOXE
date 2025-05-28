@@ -83,7 +83,7 @@ export default {
           return; // Detiene la ejecución si no se confirma
         }
 
-        // Realiza la llamada a la API para eliminar la cuenta
+        // lamada a la API para eliminar la cuenta
         const response = await axios.post(
           'http://localhost:3000/api/usuarios/eliminar-cuenta',
           {
@@ -126,7 +126,7 @@ export default {
 </script>
 
 <style scoped>
-/* Tu estilo existente */
+
 .delete-account-card {
   background-color: #ffebee !important;
   color: #d32f2f !important;

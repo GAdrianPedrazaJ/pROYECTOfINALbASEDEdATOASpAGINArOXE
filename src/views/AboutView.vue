@@ -186,7 +186,7 @@ export default {
   },
   computed: {
     ...mapGetters('cart', ['cartItems', 'cartTotalQuantity', 'cartTotalPrice']),
-    // MODIFICACIÓN CLAVE AQUÍ: Usar el getter 'isLoggedIn' de tu store principal
+ 
     isUserLoggedIn() {
       return this.$store.getters.isLoggedIn;
     },
@@ -205,7 +205,7 @@ export default {
     ...mapActions('cart', ['removeFromCart', 'incrementQuantity', 'decrementQuantity', 'clearCart']),
 
     checkLoginBeforePayment() {
-      // Esta función ahora usará el getter 'isLoggedIn' de tu store
+
       if (!this.isUserLoggedIn) {
         this.showSnackbar('Debes iniciar sesión antes de proceder al pago', 'error');
         return;
@@ -227,7 +227,6 @@ export default {
       }
 
       try {
-        // Asegúrate de que el usuario obtenido de localStorage tenga la propiedad 'id'
         const usuario = JSON.parse(localStorage.getItem('usuario'));
         if (!usuario || !usuario.id) {
           this.showSnackbar('Error: No se pudo obtener la información del usuario logueado.', 'error');
@@ -235,7 +234,7 @@ export default {
         }
 
         const pedidoData = {
-          usuario_id: usuario.id, // Asegúrate de que tu API espera 'usuario_id' y no 'userId' o similar
+          usuario_id: usuario.id, 
           nombre_cliente: this.paymentDetails.name,
           tipo_documento_id: this.paymentDetails.documentType,
           numero_documento: this.paymentDetails.documentNumber,

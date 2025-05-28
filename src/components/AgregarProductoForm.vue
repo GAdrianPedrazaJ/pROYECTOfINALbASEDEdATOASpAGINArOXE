@@ -87,20 +87,19 @@ export default {
         formData.append('precio', this.precio);
         formData.append('stock', this.stock);
         
-        // Solo agrega la imagen si el usuario ha seleccionado un archivo
         if (this.imagenArchivo) {
-          formData.append('imagen', this.imagenArchivo); // El nombre 'imagen' debe coincidir con el campo esperado por Multer en el backend
+          formData.append('imagen', this.imagenArchivo); 
         }
 
         const response = await axios.post('http://localhost:3000/api/productos/insertar', formData, {
           headers: {
-            'Content-Type': 'multipart/form-data', // Crucial para indicar que el cuerpo de la solicitud contiene datos de formulario multipart
+            'Content-Type': 'multipart/form-data', 
           },
         });
         console.log('Respuesta del backend:', response.data);
         alert('¡Producto agregado exitosamente!');
         this.$emit('producto-agregado'); // Emite un evento para que el componente padre (ej. donde está la tabla de productos) pueda recargar la lista
-        this.$emit('close'); // Cierra el modal o diálogo donde se encuentra este formulario
+        this.$emit('close'); 
 
         // Limpiar los campos del formulario después de una inserción exitosa
         this.nombre = '';

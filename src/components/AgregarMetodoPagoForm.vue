@@ -35,7 +35,7 @@ export default {
       metodoPago: {
         nombre: '',
         descripcion: '',
-        activo: true, // Por defecto, un nuevo método de pago puede estar activo
+        activo: true, 
       },
     };
   },

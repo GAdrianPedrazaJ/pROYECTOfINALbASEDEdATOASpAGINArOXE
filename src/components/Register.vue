@@ -22,7 +22,6 @@ export default {
   methods: {
     handleRegister() {
       console.log('Datos:', this.username, this.email, this.password);
-      // Aquí iría la llamada a tu backend (axios.post...)
     },
   },
 };

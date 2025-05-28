@@ -1,10 +1,10 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import HomeView from '../views/HomeView.vue';
-import AboutView from '../views/AboutView.vue'; // Mantenemos el nombre AboutView.vue para el carrito
+import AboutView from '../views/AboutView.vue'; 
 import UsuariosView from '../views/Usuarios.vue';
 import ImagenesView from '../views/Imagenes.vue';
-import PedidoConfirmado from '../views/PedidoConfirmado.vue'; // Agregamos el componente de confirmación
+import PedidoConfirmado from '../views/PedidoConfirmado.vue'; 
 
 Vue.use(VueRouter);
 
@@ -15,10 +15,10 @@ const routes = [
     component: HomeView
   },
   {
-    // Mantenemos la ruta '/about' y el componente 'AboutView' para el carrito
+    
     path: '/about',
-    name: 'about', // El nombre de la ruta sigue siendo 'about'
-    component: AboutView // El componente sigue siendo AboutView
+    name: 'about', 
+    component: AboutView 
   },
   {
     path: '/usuarios/:id',

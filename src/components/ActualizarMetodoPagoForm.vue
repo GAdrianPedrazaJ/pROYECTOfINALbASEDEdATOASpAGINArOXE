@@ -38,7 +38,7 @@ export default {
   },
   data() {
     return {
-      form: { // Creamos una copia para no modificar el prop directamente
+      form: { 
         id: this.metodoPago.id,
         nombre: this.metodoPago.nombre,
         descripcion: this.metodoPago.descripcion,
@@ -47,7 +47,6 @@ export default {
     };
   },
   watch: {
-    // Escuchar cambios en el prop 'metodoPago' para actualizar el formulario si se edita otro item
     metodoPago: {
       handler(newVal) {
         if (newVal) {

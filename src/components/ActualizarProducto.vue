@@ -96,12 +96,11 @@ export default {
       precio: this.producto.precio,
       stock: this.producto.stock,
       imagenExistente: this.producto.imagen_url, // Guarda la URL relativa de la imagen existente
-      imagenArchivo: null, // Para la nueva imagen que se sube (objeto File)
-      imagenArchivoPreview: null, // Para la previsualización de la nueva imagen (URL de objeto)
+      imagenArchivo: null, // Para la nueva imagen que se sube 
+      imagenArchivoPreview: null, // Para la previsualización de la nueva imagen 
     };
   },
   watch: {
-    // Observa los cambios en la prop 'producto'
     producto: {
       handler(newProducto) {
         // Cuando la prop 'producto' cambia, actualiza todos los datos del formulario
@@ -117,10 +116,9 @@ export default {
           this.imagenArchivoPreview = null;
         }
       },
-      deep: true, // Esto es importante para detectar cambios dentro del objeto producto
+      deep: true, // detectar cambios dentro del objeto producto
       immediate: true, // Esto hace que el watcher se ejecute inmediatamente al inicio
     },
-    // Observa los cambios en el archivo de imagen seleccionado para generar la previsualización
     imagenArchivo(newFile) {
       if (this.imagenArchivoPreview) {
         URL.revokeObjectURL(this.imagenArchivoPreview); // Libera la URL anterior si existe
@@ -164,13 +162,10 @@ export default {
           formData.append('imagen', this.imagenArchivo);
         } else if (this.imagenExistente) {
           // Si no se ha subido una nueva imagen, pero ya hay una existente,
-          // puedes enviar la URL existente si tu backend lo necesita para confirmar que no se borre.
-          // O simplemente no envíes nada si tu backend mantiene la imagen actual por defecto si no se recibe un nuevo archivo.
-          // Para este ejemplo, asumimos que el backend si no recibe 'imagen' la mantiene.
+          // puedes enviar la URL existente si al backend lo necesita para confirmar que no se borre..
         } else {
           // Si no hay imagenArchivo y no hay imagenExistente, podrías enviar un valor nulo si tu backend
           // permite que el campo de imagen sea nulo o si quieres eliminar la imagen actual.
-          // formData.append('imagen', null); // Depende de cómo tu backend maneja la eliminación de imágenes.
         }
 
         const response = await axios.put(
@@ -206,19 +201,9 @@ export default {
   color: white !important;
 }
 
-/* Estilo adicional para dar un poco más de espacio si es necesario.
-  Normalmente, mt-4 (margin-top: 16px) en el elemento sería suficiente.
-  Si el texto del label aún choca, podrías añadir un padding-top al v-card-text
-  o ajustar el padding del v-card-title como opción alternativa.
-*/
-/* .product-form-input input,
-.product-form-input textarea {
-  color: #388e3c !important;
-} */
 
-/* Nuevo estilo si necesitas un ajuste más fino para el primer input */
 .product-form-card .v-card__text .product-form-input:first-of-type {
-  margin-top: 16px !important; /* Asegura que el primer input tenga este margen superior */
+  margin-top: 16px !important; 
 }
 
 

@@ -99,7 +99,7 @@ export default {
         
         // Emitir eventos para cerrar el formulario actual y abrir el login
         this.$emit('close'); 
-        this.$emit('open-login'); // <-- ¡Esta línea es la adición clave!
+        this.$emit('open-login'); 
 
       } catch (error) {
         console.error('Error al restablecer la contraseña:', error.response?.data || error.message);

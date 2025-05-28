@@ -81,7 +81,7 @@ export default {
           correo: this.correo,
           telefono: this.telefono,
           direccion: this.direccion,
-          // contrasena: this.contrasena, // Opcional
+          // contrasena: this.contrasena, 
         };
 
         const response = await axios.put(

@@ -66,7 +66,7 @@
 
 <script>
 export default {
-  name: 'ImagenesView', // Mantenemos el nombre del componente
+  name: 'ImagenesView', 
 };
 </script>
 

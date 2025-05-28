@@ -91,18 +91,16 @@ export default {
       try {
         const response = await axios.get('http://localhost:3000/api/productos/obtener');
         this.products = response.data.map(product => {
-          let imageUrl = 'https://via.placeholder.com/200x200?text=No+Image'; // URL de fallback por defecto
+          let imageUrl = 'https://via.placeholder.com/200x200?text=No+Image';
 
           if (product.imagen_url) {
-            // Construye la URL completa del backend
             imageUrl = `http://localhost:3000${product.imagen_url}`;
-            // Añade el parámetro de tiempo para evitar la caché del navegador
             imageUrl += `?_t=${new Date().getTime()}`;
           }
           
           return {
             ...product,
-            imagen_url: imageUrl, // Asigna la URL ya construida y con el parámetro anti-caché
+            imagen_url: imageUrl, 
           };
         });
       } catch (error) {

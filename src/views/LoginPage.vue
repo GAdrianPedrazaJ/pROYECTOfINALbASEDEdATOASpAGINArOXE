@@ -145,7 +145,7 @@ export default {
 }
 
 .facebook {
-  color: #3b5998 !important; /* Azul de Facebook */
+  color: #3b5998 !important; 
 }
 
 .v-input__prepend-outer,

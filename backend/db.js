@@ -15,7 +15,6 @@ const pool = new Pool({ // <-- Crea una instancia de Pool
     }
 });
 
-// Opcional: Prueba la conexión del pool al iniciar
 pool.connect((err, client, done) => {
     if (err) {
         console.error('Error al conectar con la base de datos desde el pool:', err);
@@ -27,4 +26,4 @@ pool.connect((err, client, done) => {
     }
 });
 
-module.exports = pool; // <-- Exporta el Pool
+module.exports = pool; 
