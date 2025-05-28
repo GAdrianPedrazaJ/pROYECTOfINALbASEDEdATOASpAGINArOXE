@@ -1,0 +1,11 @@
+COMANDOS PARA INICIAR LOS SERVICIOS
+
+DOCUMENTACION EN SWAGGER: node --watch backend/documentacion.js
+
+PAGINA SWAGGER: http://localhost:3001/api-docs/#/
+
+INDEX BASE DE DATOS:node --watch backend/index.js
+
+INICIAR LA PAGINA VIEW:npm run serve
+
+PAGINA URL: http://localhost:8080/

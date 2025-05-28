@@ -1,0 +1,49 @@
+{
+  "name": "primer_proyecto",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.7",
+    "axios": "^1.9.0",
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "multer": "^2.0.0",
+    "pg": "^8.16.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "vue": "^2.6.14",
+    "vue-router": "^3.5.1",
+    "vuetify": "^2.6.0",
+    "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-plugin-vuex": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "vue-cli-plugin-vuetify": "~2.5.8",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "description": "## Project setup ``` npm install ```",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GAdrianPedrazaJ/BDPROYECTOFINAL.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GAdrianPedrazaJ/BDPROYECTOFINAL/issues"
+  },
+  "homepage": "https://github.com/GAdrianPedrazaJ/BDPROYECTOFINAL#readme"
+}
